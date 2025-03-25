@@ -33,8 +33,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#collectedBy">
         <rdfs:subPropertyOf rdf:resource="mm:isCreatedBy" />
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>composedBy</rdfs:label>
         <rdfs:comment> Connects a musical work (tune) to a Musician (composer)</rdfs:comment>
     </owl:ObjectProperty>
@@ -43,8 +43,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#collectedBy">
         <rdfs:subPropertyOf rdf:resource="mm:isCreatedBy" />
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>collectedBy</rdfs:label>
         <rdfs:comment> Connects a musical work (tune) to a Musician (collector)</rdfs:comment>
     </owl:ObjectProperty>
@@ -52,8 +52,8 @@
     <!--   PERFORMED_BY : (tune , musician):   -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#performedBy">
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>performedBy</rdfs:label>
         <rdfs:comment>Connects a musical work (tune) to a Musician (performer)</rdfs:comment>
     </owl:ObjectProperty>
@@ -61,8 +61,8 @@
     <!--   TUNE_INSTRUMENT: (tune , instrument):   -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#tuneInstrument">
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:MediumOfPerformance" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Instrument" />
         <rdfs:label>tuneInstrument</rdfs:label>
         <rdfs:comment>Highlights an association between a tune and a certain instrument</rdfs:comment>
     </owl:ObjectProperty>
@@ -71,8 +71,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#tuneInTunebook">
         <rdfs:subPropertyOf rdf:resource="core:isMemberOf" />
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:Collection" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Tunebook" />
         <rdfs:label>tuneInTunebook</rdfs:label>
         <rdfs:comment>Connects a musical work to the tunebook where it is collected</rdfs:comment>
     </owl:ObjectProperty>
@@ -81,8 +81,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#originatesFrom">
         <rdfs:subPropertyOf rdf:resource="core:hasPlace" />
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="core:Place" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Location" />
         <rdfs:label>originatesFrom</rdfs:label>
         <rdfs:comment>Connects a tune with a place it originated from</rdfs:comment>
     </owl:ObjectProperty>
@@ -91,8 +91,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#playedIn">
         <rdfs:subPropertyOf rdf:resource="core:hasPlace" />
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="core:Place" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:Location" />
         <rdfs:label>playedIn</rdfs:label>
         <rdfs:comment>Connects a tune with a place where it has been played</rdfs:comment>
     </owl:ObjectProperty>
@@ -100,8 +100,8 @@
     <!--     RECORDED_ON_AUDIO: (tune , audio_recording):       -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#recordedOnAudio">
-        <rdfs:domain rdf:resource="tunes:Tune" />
-        <rdfs:range rdf:resource="mm:Recording" />
+        <rdfs:domain rdf:resource="fyp:Tune" />
+        <rdfs:range rdf:resource="fyp:AudioRecording" />
         <rdfs:label>recordedOnAudio</rdfs:label>
         <rdfs:comment> Connects a tune to a recorded version of it.</rdfs:comment>
     </owl:ObjectProperty>
@@ -109,8 +109,8 @@
     <!-- PLAYS: (musician , instrument): -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#plays">
-        <rdfs:domain rdf:resource="mm:Musician" />
-        <rdfs:range rdf:resource="mm:MediumOfPerformance" />
+        <rdfs:domain rdf:resource="fyp:Musician" />
+        <rdfs:range rdf:resource="fyp:Instrument" />
         <rdfs:label>plays</rdfs:label>
         <rdfs:comment>Connects a musician with instruments they play.</rdfs:comment>
     </owl:ObjectProperty>
@@ -119,8 +119,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#playsWith">
         <rdfs:subPropertyOf rdf:resource="mm:hasCollaboratedWith" />
-        <rdfs:domain rdf:resource="mm:Musician" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Musician" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>playsWith</rdfs:label>
         <rdfs:comment>Connects two musicians that play together.</rdfs:comment>
     </owl:ObjectProperty>
@@ -129,8 +129,8 @@
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#writesWith">
         <rdfs:subPropertyOf rdf:resource="mm:hasCollaboratedWith" />
-        <rdfs:domain rdf:resource="mm:Musician" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Musician" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>writesWith</rdfs:label>
         <rdfs:comment>Connects two musicians that compose together.</rdfs:comment>
     </owl:ObjectProperty>
@@ -138,8 +138,8 @@
     <!--   LOCATED_IN: (musician , location):   -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#locatedIn">
-        <rdfs:domain rdf:resource="mm:Musician" />
-        <rdfs:range rdf:resource="core:Place" />
+        <rdfs:domain rdf:resource="fyp:Musician" />
+        <rdfs:range rdf:resource="fyp:Location" />
         <rdfs:label>locatedIn</rdfs:label>
         <rdfs:comment>Connects a musician with a geographical location.</rdfs:comment>
     </owl:ObjectProperty>
@@ -147,8 +147,8 @@
     <!-- COMPILED_BY: (tunebook , musician):  -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#compiledBy">
-        <rdfs:domain rdf:resource="mm:Collection" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:Tunebook" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>compiledBy</rdfs:label>
         <rdfs:comment>Connects a tunebook with the musician (collector or composer) that compiled it.</rdfs:comment>
 
@@ -156,8 +156,8 @@
     <!--  FEATURING: (audio_recording  , musician):  -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#featuring">
-        <rdfs:domain rdf:resource="mm:Recording" />
-        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:domain rdf:resource="fyp:AudioRecording" />
+        <rdfs:range rdf:resource="fyp:Musician" />
         <rdfs:label>Featuring</rdfs:label>
         <rdfs:comment>Connects an audio recording with a musician that plays on it.</rdfs:comment>
     </owl:ObjectProperty>
@@ -165,8 +165,8 @@
     <!-- INSTRUMENT_LOCATION: (instrument , location): -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#instrumentLocation">
-        <rdfs:domain rdf:resource="mm:MediumOfPerformance" />
-        <rdfs:range rdf:resource="core:Place" />
+        <rdfs:domain rdf:resource="fyp:Instrument" />
+        <rdfs:range rdf:resource="fyp:Location" />
         <rdfs:label>instrumentLocation</rdfs:label>
         <rdfs:comment>Captures an association between an instrument and a geographical location.</rdfs:comment>
     </owl:ObjectProperty>
@@ -174,8 +174,8 @@
     <!-- INSTRUMENT_RECORDED_ON: (instrument , audio_recording): -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#instrumentRecordedOn">
-        <rdfs:domain rdf:resource="mm:MediumOfPerformance" />
-        <rdfs:range rdf:resource="mm:Recording" />
+        <rdfs:domain rdf:resource="fyp:Instrument" />
+        <rdfs:range rdf:resource="fyp:Location" />
         <rdfs:label>instrumentRecordedOn</rdfs:label>
         <rdfs:comment>Connects an instrument with an audio recording that features it.</rdfs:comment>
     </owl:ObjectProperty>
@@ -189,10 +189,38 @@
      -->
 
     <owl:Class
-        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#Instrument">
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#Musician">
+        <rdfs:subClassOf rdf:resource="tunes:Tune" />
+        <rdfs:label>Tune</rdfs:label>
+        <rdfs:comment>Class for defining trad tunes</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#Musician">
+        <rdfs:subClassOf rdf:resource="mm:Musician" />
+        <rdfs:label>Musician</rdfs:label>
+        <rdfs:comment>Class for defining musicians</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#Musician">
         <rdfs:subClassOf rdf:resource="mm:MediumOfPerformance" />
         <rdfs:label>Instrument</rdfs:label>
         <rdfs:comment>Class for defining instruments</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#TuneBook">
+        <rdfs:subClassOf rdf:resource="mm:Recording" />
+        <rdfs:label>AudioRecording</rdfs:label>
+        <rdfs:comment>Class for defining instances of AudioRecording</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#TuneBook">
+        <rdfs:subClassOf rdf:resource="core:Place" />
+        <rdfs:label>Location</rdfs:label>
+        <rdfs:comment>Class for defining instances of Location</rdfs:comment>
     </owl:Class>
 
     <owl:Class
