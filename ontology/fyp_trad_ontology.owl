@@ -29,6 +29,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!--   COMPOSED_BY : (tune , musician):   -->
+    <owl:ObjectProperty
+        rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#collectedBy">
+        <rdfs:subPropertyOf rdf:resource="mm:isCreatedBy" />
+        <rdfs:domain rdf:resource="tunes:Tune" />
+        <rdfs:range rdf:resource="mm:Musician" />
+        <rdfs:label>composedBy</rdfs:label>
+        <rdfs:comment> Connects a musical work (tune) to a Musician (composer)</rdfs:comment>
+    </owl:ObjectProperty>
+
     <!--   COLLECTED_BY : (tune , musician):   -->
     <owl:ObjectProperty
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#collectedBy">
@@ -177,7 +187,7 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-    <!-- Adding instrument definition -->
+
     <owl:Class
         rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#Instrument">
         <rdfs:subClassOf rdf:resource="mm:MediumOfPerformance" />
