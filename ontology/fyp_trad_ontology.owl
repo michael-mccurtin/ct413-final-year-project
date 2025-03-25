@@ -201,4 +201,20 @@
         <rdfs:label>Tunebook</rdfs:label>
         <rdfs:comment>Class for defining instances of Tunebook</rdfs:comment>
     </owl:Class>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatype Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- SCORE: Confidence score associated with extracted relationships -->
+    <owl:DatatypeProperty rdf:about="https://michael-mccurtin.github.io/ct413-final-year-project/fyp-ontology#score">
+        <rdfs:domain rdf:resource="owl:Thing" />
+        <rdfs:range rdf:resource="xsd:decimal" />
+        <rdfs:label>score</rdfs:label>
+        <rdfs:comment>Represents a confidence score for extracted relationships, ranging from 0 to 1.</rdfs:comment>
+    </owl:DatatypeProperty>
 </rdf:RDF>
